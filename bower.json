@@ -1,9 +1,10 @@
 {
-  "name": "angular-indexedDB",
-  "version": "0.0.0",
-  "homepage": "https://github.com/webcss/angular-indexedDB",
+  "name": "angular-indexedDB-jm",
+  "version": "0.0.1",
+  "homepage": "https://github.com/joseph-montanez/angular-indexedDB",
   "authors": [
-    "webcss <webcss@capitain-reinigung.de>"
+    "webcss <webcss@capitain-reinigung.de>",
+    "Joseph Montanez <jm@shabb.com>"
   ],
   "description": "An angularjs serviceprovider to utilize indexedDB with angular",
   "main": "src/indexeddb.js",
