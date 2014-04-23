@@ -220,10 +220,14 @@ angular.module('xc.indexedDB', []).provider('$indexedDB', function() {
                         });
                     } else {
                         req = store.add(data);
-                        req.onsuccess = req.onerror = function(e) {
-                            $rootScope.$apply(function(){
-                                d.resolve(e.target.result);
+                        var result = null;
+                        req.transaction.oncomplete = function (e) {
+                            $rootScope.$apply(function () {
+                                d.resolve(result);
                             });
+                        };
+                        req.onsuccess = req.onerror = function(e) {
+                            result = e.target.result
                         };
                     }
                     return d.promise;
